@@ -5,13 +5,11 @@ class ContractsController < ApplicationController
   end 
 
   def show 
-   
   end 
 
   def new 
     @contract = Contract.new 
   end 
-
 
   def create 
     @contract = Contract.new(contract_params)
@@ -23,7 +21,6 @@ class ContractsController < ApplicationController
   end 
 
   def edit 
-
   end  
 
   def update 
@@ -38,8 +35,6 @@ class ContractsController < ApplicationController
     @contract.destroy 
     redirect_to root_path 
   end 
-
-
 
 
   private 
