@@ -1,4 +1,9 @@
 <h2><%= @contract.title %></h2>
 <h3> Please contact:  <%= @contract.owner %></h3>
-<p><%= @contract.description %></p>
+<p><%= @contract.description %></p>  
+
+
+<%= link_to "Back", root_path %>
+<%= link_to "Edit", edit_contract_path(@contract) %>
+<%= link_to "Delete", contract_path(@contract), method: :delete, data: { confirm: "Are you sure?" } %>
 
