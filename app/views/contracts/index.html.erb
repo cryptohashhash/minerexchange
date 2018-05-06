@@ -1,1 +1,5 @@
-<h1> this is index page </h1>
+<% @contracts.each do |contract| %>
+   <h2><%= link_to contract.title, contract_path(contract) %></h2>
+<% end %> 
+
+<%= link_to "Add Contract", new_contract_path %>
