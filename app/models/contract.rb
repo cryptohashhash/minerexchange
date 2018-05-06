@@ -1,2 +1,4 @@
-class Contract < ApplicationRecord
+class Contract < ApplicationRecord 
+  belongs_to :user
+
 end
