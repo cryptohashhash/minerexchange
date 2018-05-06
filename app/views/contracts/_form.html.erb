@@ -1,0 +1,7 @@
+<%= simple_form_for @contract do |f| %>
+  <%= f.input :title, label: "Contract Title" %>
+  <%= f.input :description %>
+  <%= f.input :owner %>
+  <%= f.input :price %>
+  <%= f.button :submit %>
+<% end %>
