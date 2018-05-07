@@ -17,3 +17,15 @@
 /yarn-error.log
 
 .byebug_history
+
+# Ignore application configuration
+/config/application.yml
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+/public/uploads
+
+# Ignore env files, except the sample
+.env*
+!.env.sample

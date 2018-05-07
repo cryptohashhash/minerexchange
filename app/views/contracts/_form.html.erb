@@ -4,5 +4,7 @@
   <%= f.input :description %>
   <%= f.input :owner %>
   <%= f.input :price %>
+  <%= f.label :picture, "Choose Image" %>
+  <%= f.file_field :picture %>
   <%= f.button :submit %>
 <% end %>

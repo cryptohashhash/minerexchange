@@ -50,7 +50,7 @@ class ContractsController < ApplicationController
   private 
 
   def contract_params 
-    params.require(:contract).permit(:title, :description, :owner, :price, :category_id)
+    params.require(:contract).permit(:title, :description, :owner, :price, :category_id, :picture, :remove_picture, :picture_cache)
   end
   
   def find_contract
