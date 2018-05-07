@@ -1,14 +1,24 @@
-<h2><%= @contract.title %></h2>
-<h3> Please contact:  <%= @contract.owner %></h3>
-<h4><%= @contract.category.algo %></h4>
-<p><%= @contract.description %></p>  
+<div class="row">
+       <div class="col-md-4">
+          <%= image_tag @contract.picture.url, class: "contract-show" %> 
+       </div>
 
+        <div class="col-md-8">
+          <div class="contract-info">
+              <h2 class="contract-title"><%= @contract.title %></h2>
+              <h3 class="contract-owner"><span> Please contact:  </span><%= @contract.owner %></h3>
+              <h4 class="contract-owner"><%= @contract.category.algo %></h4>
+              <p class="contract-desc"><%= @contract.description %></p>  
+          </div>
+       </div>
+
+</div>
 
 <div class="links btn-group">
    <% if user_signed_in? %>
      <% if @contract.user_id == current_user.id %>
-        <%= link_to "Edit", edit_contract_path(@contract) %>
-        <%= link_to "Delete", contract_path(@contract), method: :delete, data: { confirm: "Are you sure?" } %>
+        <%= link_to "Edit", edit_contract_path(@contract), class: "btn btn-custom" %>
+        <%= link_to "Delete", contract_path(@contract), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-custom" %>
      <% end %>
    <% end %>
 </div>
