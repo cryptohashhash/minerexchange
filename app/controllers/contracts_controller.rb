@@ -9,10 +9,12 @@ class ContractsController < ApplicationController
 
   def new 
     @contract = current_user.contracts.build
+    @categories = Category.all.map {|c| [c.algo, c.id]}
   end 
 
   def create 
     @contract = current_user.contracts.build(contract_params)
+    @contract.category_id = params[:category_id]
     if @contract.save 
       redirect_to root_path 
     else 
@@ -21,9 +23,12 @@ class ContractsController < ApplicationController
   end 
 
   def edit 
+    @categories = Category.all.map {|c| [c.algo, c.id]}
   end  
 
   def update 
+    @contract.category_id = params[:category_id]
+    
     if @contract.update(contract_params) 
       redirect_to contract_path(@contract)
     else 
@@ -40,7 +45,7 @@ class ContractsController < ApplicationController
   private 
 
   def contract_params 
-    params.require(:contract).permit(:title, :description, :owner, :price)
+    params.require(:contract).permit(:title, :description, :owner, :price, :category_id)
   end
   
   def find_contract
