@@ -8,11 +8,11 @@ class ContractsController < ApplicationController
   end 
 
   def new 
-    @contract = current_user.contract.build
+    @contract = current_user.contracts.build
   end 
 
   def create 
-    @contract = current_user.contract.build(contract_params)
+    @contract = current_user.contracts.build(contract_params)
     if @contract.save 
       redirect_to root_path 
     else 
