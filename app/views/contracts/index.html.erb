@@ -1,4 +1,13 @@
-<% @contracts.each do |contract| %>
-   <h2><%= link_to contract.title, contract_path(contract) %></h2>
-<% end %> 
+<h1 class="current-category"><%= params[:category] %></h1>
+<% if @contracts.count == 0 %>
+  <h3>There are no contracts in this category</h3>
+<% else %>
+  <% @contracts.each do |contract| %>
+     <h2><%= link_to contract.title, contract_path(contract) %></h2>
+  <% end %>
+<% end %>
+
+
+
+
 

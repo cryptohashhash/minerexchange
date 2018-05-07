@@ -1,7 +1,12 @@
 class ContractsController < ApplicationController
   before_action :find_contract, only: [:show, :edit, :update, :destroy]
   def index
-    @contracts = Contract.all.order("created_at DESC")
+    if params[:category].blank? 
+      @contracts = Contract.all.order("created_at DESC")
+    else 
+      @category_id = Category.find_by(algo: params[:category]).id
+      @contracts = Contract.where(category_id: @category_id).order("created_at DESC")
+    end
   end 
 
   def show 
@@ -28,7 +33,7 @@ class ContractsController < ApplicationController
 
   def update 
     @contract.category_id = params[:category_id]
-    
+
     if @contract.update(contract_params) 
       redirect_to contract_path(@contract)
     else 
