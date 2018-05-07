@@ -1,2 +1,10 @@
 <h1> Edit Mining Contract Details</h1>
-<%= render 'form' %>
+<%= simple_form_for(@contract, html: { multipart: true }) do |f| %>
+         
+  <%= f.select :category_id, @categories %>
+  <%= f.input :title, label: "Contract Title" %>
+  <%= f.input :description %>
+  <%= f.input :owner %>
+  <%= f.input :price %>
+  <%= f.button :submit %>
+<% end %>
