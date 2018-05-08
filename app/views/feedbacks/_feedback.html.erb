@@ -1,0 +1,16 @@
+<div class='feedback'> 
+  <p><%= feedback.rating %>
+  <p class="feedback-comment">
+     <%= feedback.comment %>
+  </p>
+  <% if user_signed_in? %>
+      <% if feedback.user_id == current_user.id %>
+
+         <div class="links btn-group">
+            <%= link_to "Change Feedback", edit_contract_feedback_path(feedback.contract, feedback), class: "btn btn-custom" %>
+            <%= link_to "Delete Feedback", contract_feedback_path(feedback.contract, feedback), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-custom" %>
+         </div>
+         <% end %>
+  <% end %>
+
+  </div>

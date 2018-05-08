@@ -8,13 +8,25 @@
         <div class="col-md-8">
           <div class="contract-info">
               <h2 class="contract-title"><%= @contract.title %></h2>
-              <h3 class="contract-owner"><span> Please contact:  </span><%= @contract.owner %></h3>
+              <h3 class="contract-owner"><span><em> Please contact:  </em></span><%= @contract.owner %></h3>
               <h4 class="contract-owner"><%= @contract.category.algo %></h4>
               <p class="contract-desc"><%= @contract.description %></p>  
           </div>
        </div>
 
 </div>
+
+<div class="row">
+  <div class="col-md-12">
+     <div class="feedbacks">
+       <h1> Feedbacks </h1>
+         <%= render @contract.feedbacks %>
+         <div>
+            <%= link_to "Add Feedbacks", new_contract_feedback_path(@contract), class: "btn-custom"%>
+         </div>
+    </div>
+  </div>
+</div> 
 
 <div class="links btn-group">
    <% if user_signed_in? %>
