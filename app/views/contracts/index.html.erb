@@ -5,9 +5,11 @@
   <div class="row">
      <% @contracts.each do |contract| %>
         <div class="col-md-3">
+        <% if contract.picture? %>
            <a href="/contracts/ <%= contract.id %>">
            <%= image_tag contract.picture.url, class: "contract" %>
            </a>
+        <% end %>
            <h4><%= contract.title %></h2>
            <h4><%= contract.category.algo %></h4>
            <h4>$<%= contract.price %></h2>
