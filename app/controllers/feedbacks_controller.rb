@@ -26,7 +26,7 @@ end
 private 
 
 def find_contract
-  @contract = Contract.find(params[:id])
+  @contract = Contract.find(params[:contract_id])
 end 
 
 def feedback_params 
