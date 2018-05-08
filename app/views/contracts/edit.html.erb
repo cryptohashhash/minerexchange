@@ -1,4 +1,8 @@
 <h1> Edit Mining Contract Details</h1>
+<div class="col-md-10 col-md-offset-1">
+
+ <div class="new-contract-form">
+
 <%= simple_form_for(@contract, html: { multipart: true }) do |f| %>
          
   <%= f.select :category_id, @categories %>
@@ -10,3 +14,6 @@
   <%= f.file_field :picture %>
   <%= f.button :submit %>
 <% end %>
+
+  <div>
+</div>

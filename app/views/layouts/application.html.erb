@@ -25,8 +25,8 @@
 
       <ul class="nav navbar-nav">
         <li class="dropdown"> 
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sort <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menue">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Sort By Algorithm   <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
              <% Category.all.each do |category| %>
                <li class="<%= 'active' if params[:category] == category.algo %>">
                <%= link_to category.algo, contracts_path(category: category.algo), class: "link" %>
