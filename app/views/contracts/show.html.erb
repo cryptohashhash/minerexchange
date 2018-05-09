@@ -38,8 +38,14 @@
                                                         data-locale="auto">
                                                 </script>
                                       <% end %>
-                            <% else %>
-                                <p class="contract-owner">Please register or login to purchase</p>
+                            <% elsif user_signed_in? && @contract.user.id = current_user.id %>
+
+                                <div class="links btn-group">
+                                          <%= link_to "Edit", edit_contract_path(@contract), class: "btn btn-custom" %>
+                                          <%= link_to "Delete", contract_path(@contract), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-custom" %>
+                                </div>
+                                <% else %>
+                                <strong class="contract-owner">Please register or login to purchase</strong>
                             <% end %>
                 </p>
         
