@@ -22,7 +22,11 @@
        <h1> Feedbacks </h1>
          <%= render @contract.feedbacks %>
          <div>
-            <%= link_to "Add Feedbacks", new_contract_feedback_path(@contract), class: "btn-custom"%>
+            <% if user_signed_in? %>
+               <% if @contract.user_id != current_user.id %>
+                  <%= link_to "Add Feedbacks", new_contract_feedback_path(@contract), class: "btn-custom"%>
+               <% end %>
+            <% end %>
          </div>
     </div>
   </div>

@@ -4,6 +4,7 @@
      <%= feedback.comment %>
   </p>
   <% if user_signed_in? %>
+  
       <% if feedback.user_id == current_user.id %>
 
          <div class="links btn-group">

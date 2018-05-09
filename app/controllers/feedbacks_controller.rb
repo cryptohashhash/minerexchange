@@ -1,6 +1,7 @@
 class FeedbacksController < ApplicationController
   before_action :find_contract 
   before_action :find_feedback, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit]
 
 def new 
 
@@ -11,6 +12,7 @@ end
 def create 
   @feedback = Feedback.new(feedback_params)
   @feedback.contract_id = @contract.id
+
   @feedback.user_id = current_user.id 
 
   if @feedback.save 
