@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :feedbacks 
   end
 
+  resources :charges
+
   root 'contracts#index'
   
 end

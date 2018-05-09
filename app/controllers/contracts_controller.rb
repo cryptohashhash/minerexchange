@@ -1,5 +1,7 @@
 class ContractsController < ApplicationController
+
   before_action :find_contract, only: [:show, :edit, :update, :destroy]
+
   def index
     if params[:category].blank? 
       @contracts = Contract.all.order("created_at DESC")
@@ -42,6 +44,7 @@ class ContractsController < ApplicationController
   end 
 
   def destroy 
+    
     @contract.destroy 
     redirect_to root_path 
   end 
