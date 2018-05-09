@@ -96,16 +96,16 @@ p.alert, p.notice {
 /* Button/link styles */
 
 .btn-custom {
-	color: darken(#bdbdbd, 5%);
+	color: darken(black, 5%);
 	background-color: #fff;
 	border: 1px solid darken(#bdbdbd, 5%);
 	padding: 8px 20px;
-	border-radius: 0px;
-	font-family: 'Lato', sans-serif;
+	border-radius: 8px;
+	font-family: sans-serif, 'Lato';
 	&:hover {
 		text-decoration: none;
 		background-color: darken(#bdbdbd, 5%);
-		color: #fff;
+		color: lime;
 		transition: 0.5s;
 	}
 }

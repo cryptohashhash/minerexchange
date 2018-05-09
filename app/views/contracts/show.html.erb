@@ -48,33 +48,35 @@
                                 <strong class="contract-owner">Please register or login to purchase</strong>
                             <% end %>
                 </p>
-        
         </div>
 </div>
 
-
-
 <div class="row">
   <div class="col-md-12">
+  
      <div class="feedbacks">
        <h1> Feedbacks </h1>
-         <%= render @contract.feedbacks %>
-         <div>
+        <% if @contract.feedbacks.count == 0 %>
+           <em class="contract-owner">There is no feedbacks so far</em>
+        <% else %>
+           <%= render @contract.feedbacks %>
+        <% end %>
+     </div>
+    <div>
+    </div>
+    </br>
+    </br>
+    <div class="row">
             <% if user_signed_in? %>
                <% if @contract.user_id != current_user.id %>
                   <%= link_to "Add Feedbacks", new_contract_feedback_path(@contract), class: "btn-custom"%>
                <% end %>
             <% end %>
-         </div>
     </div>
   </div>
-</div> 
 
-<div class="links btn-group">
-   <% if user_signed_in? %>
-     <% if @contract.user_id == current_user.id %>
-        <%= link_to "Edit", edit_contract_path(@contract), class: "btn btn-custom" %>
-        <%= link_to "Delete", contract_path(@contract), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-custom" %>
-     <% end %>
-   <% end %>
-</div>
+  </br>
+  </br>
+  </br>
+  </br>
+
