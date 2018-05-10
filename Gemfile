@@ -41,6 +41,7 @@ gem 'figaro', '~> 1.1', '>= 1.1.1'
 #gem 'fog', '~> 2.0'
 gem 'aws-sdk-rails', '~> 2.0', '>= 2.0.1'
 gem 'stripe'
+gem 'sendgrid-ruby'
 
 
 group :development, :test do

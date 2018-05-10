@@ -3,16 +3,20 @@
 
  <div class="new-contract-form">
 
-<%= simple_form_for(@contract, html: { multipart: true }) do |f| %>
-         
-  <%= f.select :category_id, @categories %>
-  <%= f.input :title, label: "Contract Title" %>
-  <%= f.input :description %>
-  <%= f.input :owner %>
-  <%= f.input :price %>
-  <%= f.label :picture, "Choose Image" %>
-  <%= f.file_field :picture %>
-  <%= f.button :submit %>
+  <% if user_signed_in? && current_user.id == @contract.user_id %>
+      <%= simple_form_for(@contract, html: { multipart: true }) do |f| %>
+              
+        <%= f.select :category_id, @categories %>
+        <%= f.input :title, label: "Contract Title" %>
+        <%= f.input :description %>
+        <%= f.input :owner %>
+        <%= f.input :price %>
+        <%= f.label :picture, "Choose Image" %>
+        <%= f.file_field :picture %>
+        <%= f.button :submit %>
+
+   <% else %> 
+  <%= redirect_to root_path %>
 <% end %>
 
   <div>
