@@ -34,7 +34,6 @@ Those machines are geographically located at so many locations, the trading has 
 
 Create a better online store dedicated to the buying and selling of used or new mining machines.
 
-
 ## User Stories
 
 Preliminary user stories were collected in Trello, with more detailed user stories created later on.
@@ -192,7 +191,7 @@ Preliminary user stories were collected in Trello, with more detailed user stori
 
 ## Workflow
 
-
+[here](https://drive.google.com/file/d/1yU0UcLJ6m4j2Wf0uCTSLpa9Pggzhao_N/view?usp=sharing)
 ![workflow](/readme_resources/workflow_diagram.png)
 
 ## Style Guide
@@ -206,28 +205,24 @@ Colours and fonts were chosen as below.
 
 ## Wireframes
 
-Content-first mockups were created using Figma and can be viewed [here](https://www.figma.com).
-
-![mockup](/readme_resources/mockups/1.png)
-![mockup](/readme_resources/mockups/2.png)
-![mockup](/readme_resources/mockups/3.png)
-![mockup](/readme_resources/mockups/4.png)
-![mockup](/readme_resources/mockups/5.png)
-![mockup](/readme_resources/mockups/6.png)
-![mockup](/readme_resources/mockups/7.png)
+![mockup](/readme_resources/wireframe_index.png)
+![mockup](/readme_resources/wireframe_login.png)
+![mockup](/readme_resources/wireframe_signup.png)
+![mockup](/readme_resources/wireframe_create_listing.png)
+![mockup](/readme_resources/wireframe_sort_function.png)
+![mockup](/readme_resources/wireframe_sort_result.png)
+![mockup](/readme_resources/wireframe_individual_listing.png)
 
 
 ## ERD
 
-
-![erd](/readme_resources/erd_original.png)
-
+![erd](/readme_resources/erd.png)
 
 ## Trello
 
-See this project's [Trello board](https://trello.com) for details.
+See this project's [Trello board](https://trello.com/b/XgYUGInt/miner-exchange) for details.
 
 
-![trello](/readme_resources/trello_snapshot_1.png)
+![trello](/readme_resources/trello.png)
 
 
