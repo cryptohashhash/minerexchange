@@ -36,14 +36,6 @@ Create a better online store dedicated to the buying and selling of used or new 
 
 ## User Stories
 
-Preliminary user stories were collected in Trello, with more detailed user stories created later on.
-
-
-![trello](/readme_resources/trello/trello_1.png)
-![trello](/readme_resources/trello/trello_2.png)
-![trello](/readme_resources/trello/trello_3.png)
-![trello](/readme_resources/trello/trello_4.png)
-
 ***User should be able to edit their own profile***
 
 **Feature:** Edit Profile
