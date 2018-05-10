@@ -139,7 +139,7 @@ Create a better online store dedicated to the buying and selling of used or new 
 **Scenario:** User visits their profile page
 - Given I'm a logged in User
 - When I go to my profile page
-- Then I do not see a 'message reader' button
+- Then I do not see a 'add message/feedback' button
 
 ---
 
@@ -160,7 +160,7 @@ Create a better online store dedicated to the buying and selling of used or new 
 
 **Feature:** Detailed individual listings without login
 - As a User
-- I want to view book listings without signing in
+- I want to view listings without signing in
 - Because I want to know more about this site
 
 **Scenario:** User visits detailed book view page
